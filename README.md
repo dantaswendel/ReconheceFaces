@@ -134,3 +134,19 @@ def main():
     exclui_imagem_colecao(faceId_detectadas)
     print(json.dumps(dados_json, indent=4))
 ```
+
+<h2 id="Tecnologias">Tecnologias utilizadas </h2>
+
+<a href="https://aws.amazon.com/pt/lambda/">
+        <img align="center" alt="AWS - Lambda" title="AWS - Lambda" height="80px" width="80px" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Amazon_Lambda_architecture_logo.png"/>
+    </a>
+    <a href="https://aws.amazon.com/pt/s3/?trk=9c7f9c59-8d98-452d-8a14-441a9b6492f3&sc_channel=ps&s_kwcid=AL!4422!3!589951433465!e!!g!!amazon%20s3&ef_id=Cj0KCQjw1bqZBhDXARIsANTjCPK5w2A7CcqPN7DZJf11fk9kZcCgouSwJkoVKgauQMyeAlSB3mYlEBcaArycEALw_wcB:G:s&s_kwcid=AL!4422!3!589951433465!e!!g!!amazon%20s3">
+        <img align="center" alt="Git" title="Git" height="80px" width="90px" src="https://connectoricons-prod.azureedge.net/releases/v1.0.1597/1.0.1597.3005/amazons3/icon.png"/>
+    </a>
+    <a href="https://www.python.org/">
+        <img align="center" alt="PYTHON" title="PYTHON" height="80px" width="90px" src="https://cdn.icon-icons.com/icons2/112/PNG/512/python_18894.png"/>
+    </a>
+        <a href="https://docs.aws.amazon.com/rekognition/latest/dg/what-is.html">
+        <img align="center" alt="Rekognition" title="Rekognition" height="80px" width="90px" src="https://cdn.icon-icons.com/icons2/112/PNG/512/python_18894.png"/>
+    </a>
+
