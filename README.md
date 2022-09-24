@@ -22,3 +22,72 @@ def lista_imagens():
         print(imagens)
     return imagens
 ```
+- Indexa imagens na coleção.
+
+```
+def indexa_colecao(imagens):
+    for i in imagens:
+        response=client.index_faces(
+            CollectionId='faces',
+            DetectionAttributes=[
+            ],
+            ExternalImageId=i[:-4],
+            Image={
+                'S3Object':{
+                    'Bucket': 'faimagem',
+                    'Name': i,
+                },
+            },
+        )
+```
+
+<h4 id="analiseFaces">analiseFaces</h4>
+
+- Detecta faces nas imagens.
+
+```
+def detecta_faces():
+    faces_detectadas = client.index_faces(
+        CollectionId='faces',
+        DetectionAttributes=['DEFAULT'],
+        ExternalImageId='TEMPORARIA',
+        Image={
+            'S3Object': {
+                'Bucket': 'faimagem',
+                'Name': '_ANALISE.png',
+            },
+        },
+    )
+     return faces_detectadas
+```
+
+- Cria uma lista com as faces detectadas nas imagens.
+
+```
+def cria_lista_faceId_detectadas(faces_detectadas):
+    faceId_detectadas = []
+    for imagens in range(len(faces_detectadas['FaceRecords'])):
+        faceId_detectadas.append(faces_detectadas['FaceRecords'][imagens]['Face']['FaceId'])
+    return faceId_detectadas
+
+```
+
+- Compara as imagens e reconhece as faces presentes no bucket em relação a nova imagem de parametro para a comparação.
+
+```
+def compara_imagens(faceId_detectadas):
+    resultado_comparacao = []
+    for ids in faceId_detectadas:
+        resultado_comparacao.append(
+            client.search_faces(
+                CollectionId='faces',
+                FaceId=ids,
+                FaceMatchThreshold=80,
+                MaxFaces=10,
+            )
+        )
+    return resultado_comparacao
+
+
+```
+
