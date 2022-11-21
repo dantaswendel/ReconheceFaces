@@ -147,6 +147,6 @@ def main():
         <img align="center" alt="PYTHON" title="PYTHON" height="80px" width="90px" src="https://cdn.icon-icons.com/icons2/112/PNG/512/python_18894.png"/>
     </a>
         <a href="https://docs.aws.amazon.com/rekognition/latest/dg/what-is.html">
-        <img align="center" alt="Rekognition" title="Rekognition" height="80px" width="90px" src="https://images.saasworthy.com/tr:w-178,h-0/amazonrekognition_11564_logo_1632389463_bxczs.png"/>
+        <img align="center" alt="Amazon Rekognition" title="Rekognition" height="80px" width="90px" src="https://images.saasworthy.com/tr:w-178,h-0/amazonrekognition_11564_logo_1632389463_bxczs.png"/>
     </a>
 
